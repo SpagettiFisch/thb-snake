@@ -18,19 +18,23 @@
 });
             //loadSprite("frodo", "Frodo.jpg");
 
+            //Spawn
+            function create_snake(){
             for(let i = 1; i <= playerlength; i++){
                 let segment = add([
-                health(1),
                 //sprite("frodo"),
                 area(),
-                scale(64, 64),
-                pos(100, 100),
-                color(88, 88, 88),
+                rect(16, 16),
+                pos(48, 48),
+                color(51, 51, 255),
                 "snake"
                 ])
                 snake.push(segment)
                 }
-            
+            }
+            create_snake()
+
+                /*
                 let bewegt_sich = false; 
                 let aktuelle_richtung = richtung.RECHTS;
                 let verzoegerung = 0.2; 
@@ -50,7 +54,7 @@ onUpdate(()=> {
     }
 // Wenn der Timer den aktuellen Verzögerungswert erreicht hat, setze ihn auf 0
 timer = 0;
-})
+})*/
             onKeyPress("up",() => {
                 // Hier passiert jetzt etwas wie zum Beispiel:
                 player.move(0,-10)
@@ -67,6 +71,10 @@ timer = 0;
                 // Hier passiert jetzt etwas wie zum Beispiel:
                 player.move(0,-10)
             })
+            onKeyPress("space", () => {
+                create_snake()
+            })
+            
             
             onCollide("player","border", (border) => {
                 destroy(player)
