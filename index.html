@@ -8,15 +8,23 @@
             var playerlength = 1;
             let snake = []
             
-            kaboom();
-            loadSprite("frodo", "Frodo.jpg");
+            kaboom({
+    width: 582,
+    height: 582,
+    font: "sinko",
+    canvas: document.querySelector("#mycanvas"),
+    background: [ 0, 0, 255],
+});
+            //loadSprite("frodo", "Frodo.jpg");
 
             for(let i = 1; i <= playerlength; i++){
                 let segment = add([
                 health(1),
-                sprite("frodo"),
+                //sprite("frodo"),
                 area(),
+                scale(64, 64),
                 pos(100, 100),
+                color(88, 88, 88),
                 "snake"
                 ])
                 snake.push(segment)
