@@ -31,6 +31,26 @@
                 snake.push(segment)
                 }
             
+                let bewegt_sich = false; 
+                let aktuelle_richtung = richtung.RECHTS;
+                let verzoegerung = 0.2; 
+                let timer = 0;
+
+                const richtung = { HOCH: "up", RUNTER: "down", RECHTS: "left", LINKS: "right" }
+
+
+
+
+onUpdate(()=> { 
+    if(bewegt_sich == false) { 
+        return;
+    } // Wenn sich die Schlange nicht bewegt, höre hier auf } timer += dt(); // Erhöhe den Timer um die Zeit für ein Frame
+    if(timer < verzoegerung) {
+        return;     // Wenn der Timer nicht den Verzögerungswert erreicht hat - höre auf 
+    }
+// Wenn der Timer den aktuellen Verzögerungswert erreicht hat, setze ihn auf 0
+timer = 0;
+})
             onKeyPress("up",() => {
                 // Hier passiert jetzt etwas wie zum Beispiel:
                 player.move(0,-10)
