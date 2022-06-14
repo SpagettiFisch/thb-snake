@@ -82,6 +82,9 @@
                 }
                 H_score.text = `Highscore: ${highscore}`
                 con.text = "Press space to continue"
+                if(snake_length - 2 == 88) {
+                    window.open("https://www.youtube.com/watch?v=QtBDL8EiNZo", '_blank').focus();
+                }
                 return highscore
             }
             function respawn_all(){
