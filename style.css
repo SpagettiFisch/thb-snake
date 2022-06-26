@@ -38,3 +38,41 @@ body {
 #navigation a:hover {
     color: rgb(255, 83, 4);
 }
+
+#image img {
+    width: 25%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#main {
+    max-width: 95%;
+    margin:auto;
+}
+
+#main a {
+    color: rgb(255, 109, 109);
+    padding: 4px;
+}
+
+#main a:hover {
+    color: rgb(255, 4, 4);
+}
+
+#nav a {
+    color: rgb(109, 255, 133);
+    padding: 4px;
+}
+
+#nav a:hover {
+    color: rgb(4, 255, 25);
+}
+
+#footer {
+    color: rgb(22, 22, 22);
+    background-color: rgb(9, 4, 10);
+    text-align: center;
+    margin-top: 32px;
+    padding-left: 128px;
+    padding-right: 128px;
+}
