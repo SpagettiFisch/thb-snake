@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hawuuuuuu</title>
+
+    </head>
+    <body>
+        <div id="buttons">
+            <t id="button_up">▲</t><br>
+            <t id="button_left">◀</t>
+            <t id="button_down">▼</t>
+            <t id="button_right">▶</t>
+        </div>
+
+        <script>
+            document.getElementById("button_up").onclick = function() {buttonUp()};
+            document.getElementById("button_left").onclick = function() {buttonLeft()};
+            document.getElementById("button_down").onclick = function() {buttonDown()};
+            document.getElementById("button_right").onclick = function() {buttonRight()};
+            
+            function buttonUp() {
+                document.getElementById("button_up").style.backgroundColor = "rgb(10, 4, 50)";
+                setTimeout(() => {document.getElementById("button_up").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                window.dispatchEvent(new KeyboardEvent('keydown', {'key': 'up'}));
+            }
+            function buttonLeft() {
+                document.getElementById("button_left").style.backgroundColor = "rgb(10, 4, 50)";
+                setTimeout(() => {document.getElementById("button_left").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                window.dispatchEvent(new KeyboardEvent('keydown', {'key': 'left'}));
+            }
+            function buttonDown() {
+                document.getElementById("button_down").style.backgroundColor = "rgb(10, 4, 50)";
+                setTimeout(() => {document.getElementById("button_down").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                window.dispatchEvent(new KeyboardEvent('keydown', {'key': 'down'}));
+            }
+            function buttonRight() {
+                document.getElementById("button_right").style.backgroundColor = "rgb(10, 4, 50)";
+                setTimeout(() => {document.getElementById("button_right").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                window.dispatchEvent(new KeyboardEvent('keydown', {'key': 'right'}));
+            }
+            </script>
+    </body>
+</html>

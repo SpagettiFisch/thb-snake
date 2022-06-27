@@ -1,7 +1,6 @@
-<html>
+    <html>
     <head>
-        <style>
-        </style>
+        <link rel = "stylesheet" href = "snake.css">
         <script type="module">                  
             import kaboom from "https://unpkg.com/kaboom/dist/kaboom.mjs";
 
@@ -263,6 +262,40 @@
             </script>
     </head>
     <body>
-
+        <body>
+            <div id="buttons">
+                <t id="button_up">▲</t><br>
+                <t id="button_left">◀</t>
+                <t id="button_down">▼</t>
+                <t id="button_right">▶</t>
+            </div>
+    
+            <script>
+                document.getElementById("button_up").onclick = function() {buttonUp()};
+                document.getElementById("button_left").onclick = function() {buttonLeft()};
+                document.getElementById("button_down").onclick = function() {buttonDown()};
+                document.getElementById("button_right").onclick = function() {buttonRight()};
+                
+                function buttonUp() {
+                    document.getElementById("button_up").style.backgroundColor = "rgb(10, 4, 50)";
+                    setTimeout(() => {document.getElementById("button_up").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                    if (direction != directions.DOWN){direction = directions.UP;}
+                }
+                function buttonLeft() {
+                    document.getElementById("button_left").style.backgroundColor = "rgb(10, 4, 50)";
+                    setTimeout(() => {document.getElementById("button_left").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                    if (direction != directions.RIGHT){direction = directions.LEFT;}
+                }
+                function buttonDown() {
+                    document.getElementById("button_down").style.backgroundColor = "rgb(10, 4, 50)";
+                    setTimeout(() => {document.getElementById("button_down").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                    if (direction != directions.UP){direction = directions.DOWN;}
+                }
+                function buttonRight() {
+                    document.getElementById("button_right").style.backgroundColor = "rgb(10, 4, 50)";
+                    setTimeout(() => {document.getElementById("button_right").style.backgroundColor = "rgb(21, 7, 85)"}, 250);
+                    if (direction != directions.LEFT){direction = directions.RIGHT;}
+                }
+                </script>
     </body>
 </html>
