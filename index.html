@@ -11,6 +11,7 @@
             <div id="logo_name">Website</div>
             <div id="nav">
                 <a href = "#info">Informationen</a>
+                <a href = "#plan">Vertretungsplan</a>
                 <a href = "#platzhalter">Platzhalter</a>
                 <a href = "#funfacts">FunFacts</a>
             </div>
@@ -29,6 +30,32 @@
                 <p>Das Spiel <a href = "snake.html">Snake</a> wurde auf Basis von kaboom.js geschrieben. Es wurde im Anlass des 'Summer Coding Festivals' der Technischen Hochschule Brandenburgs im Jahr 2022 angefangen und nachträglich mithilfe einer Wikki, aus der die Idee auch vom Projektleiter übernommen wurde, vollendet.<br>
                 Der <a href = "http://192.168.178.88:80">PiCloud Server</a> wurde zur einfachen Datenübertragung von Mobilgerät auf Desktop-Computer aufgesetzt. Trotzdem gibt es weiterhin Familienmitglieder, denen das ganze viel zu kompliziert ist und die zu faul sind die Bilder, die sie aufnehmen, so bald wie möglich hochzuladen. Vielleicht fixt sich das ja noch nach einer kleinen Gewöhnungszeit.<br>
                 <a href = "#">OctoPrint</a> dient dem leichten Zugriff von überall auf den 3D-Drucker (Drei-D-Drucker, also 3 mal 'D' am Anfang, kurz: 3Ds), ob es zum Start eines neuen Druckauftrages oder nur zur Überwachung des alten Druckauftrages ist, mit OctoPrint lässt sich das ganze sehr leicht steuern. Sogar die Oma könnte damit drucken.</p>
+            </section>
+            <section id = "plan">
+                <h2>Vertretungsplan Klasse 11 Gauss</h2>
+                <script>
+                    (function () {
+                        get('C:\Users\johme\OneDrive\Dokumente\coding\Webserver\Vertretungsplan\plan', function (data) {
+                            words = data.split('\s')
+                            document.write(words)
+                        });
+                    });
+
+
+                </script>
+                <!--
+                <script type = 'module'>
+                    import requirejs from "C:/Users/johme/OneDrive/Dokumente/coding/Webserver/thb-snake/require.js"
+                    const fs = require('fs');
+                    fs.readFile('Vertretungsplan/plan', function(err, data) {
+                        if(err) throw err;
+                        const arr = data.toString().replace(/^(\n-----\n)/,'');split('-----');
+                        for(let i of arr) {
+                            document.write(i);
+                        }
+                    });
+                </script>
+                -->
             </section>
             <section id="platzhalter">
                 <h2>Platzhaltertext</h2>
@@ -65,3 +92,4 @@
     </body>
 
 </html>
+
