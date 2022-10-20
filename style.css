@@ -21,7 +21,6 @@ body {
 
 #logo_name {
     font-size: 32px;
-    padding-left: 48px;
     font-weight: bold;
     margin: 16px;
 }
@@ -77,4 +76,11 @@ body {
     margin-top: 32px;
     padding-left: 128px;
     padding-right: 128px;
+}
+
+#plan {
+    width: 88%;
+    height: 512px;
+    margin-bottom: auto;
+    font-weight: bold;
 }
